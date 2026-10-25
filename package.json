@@ -1,0 +1,13 @@
+{
+  "name": "nipponflex-landing",
+  "version": "1.0.0",
+  "description": "Landing page Nipponflex com Tailwind CSS",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind-index.css -o ./css/tailwind-output.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind-index.css -o ./css/tailwind-output.css --watch",
+    "dev": "npm run watch:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
