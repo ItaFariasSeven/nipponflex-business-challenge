@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f7f7f7;
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.rodape {
+  background: #f7f7f7;
+  padding: 116px 0 58px;
+  min-height: 462px;
+}
+
+.container {
+  width: 1084px;
+  margin: auto;
+}
+
+.footercima {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logotipo {
+  font-family: "Almendra", serif;
+  font-size: 32px;
+  color: #1c1c1c;
+}
+
+.direitos {
+  font-family: "Almendra", serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 24px;
+}
+
+.titulo {
+  font-size: 16px;
+  font-weight: normal;
+  color: #ff9a3c;
+}
+
+.listalinks {
+  margin-top: 16px;
+}
+
+.listalinks li {
+  margin-bottom: 20px;
+}
+
+.listalinks a {
+  font-family: "Almendra", serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+.listalinks a:hover {
+  color: #ff9a3c;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social svg {
+  width: 20px;
+  height: 20px;
+  fill: #1c1c1c;
+  color: #1c1c1c;
+}
+
+.footerbaixo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #8a8f98;
+}
+
+.linkslegais {
+  display: flex;
+  gap: 14px;
+}
+
+.linkslegais a {
+  font-family: "Almendra", serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+.linkslegais a:hover {
+  color: #ff9a3c;
+}
