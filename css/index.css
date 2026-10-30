@@ -4,6 +4,13 @@
    Nipponflex — Estilos Customizados
    ========================================= */
 
+/* Banner da seção de tecnologias */
+.technologies-hero {
+  background-image: url("./images/banner.jpg");
+  background-size: cover;
+  background-position: center 58%;
+}
+
 /* Scroll horizontal suave */
 .horizontal-scroll {
   scroll-behavior: smooth;
@@ -99,9 +106,95 @@ header.scrolled {
   backdrop-filter: blur(8px);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
   .scroll-btn {
+    display: none;
+  }
+}
+
+/* Menu de navegacao para telas pequenas */
+@media (max-width: 767px) {
+  .mobile-menu-toggle {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(28, 25, 23, 0.28);
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .mobile-menu-toggle.is-open span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.is-open span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .site-navigation {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 16px;
+    left: auto;
+    z-index: 60;
+    display: none;
+    width: min(18rem, calc(100vw - 2rem));
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    background: rgba(28, 25, 23, 0.97);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(12px);
+  }
+
+  .site-navigation.is-open {
+    display: flex;
+  }
+
+  .site-navigation a {
+    display: block;
+    padding: 13px 16px;
+    border-radius: 10px;
+  }
+
+  .site-navigation a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-toggle {
     display: none;
   }
 }

@@ -15,21 +15,28 @@
 <body class="font-body text-stone-900 antialiased">
 
   <header class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300" id="header">
-    <div class="max-w-[1440px] mx-auto px-10 py-7 flex items-center justify-between">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-10 py-7 flex items-center justify-between">
       <a href="#" class="text-white text-3xl font-aclonica capitalize tracking-tight">Nipponflex</a>
 
-      <nav class="hidden md:flex items-center gap-14">
+      <nav id="primary-navigation" class="site-navigation hidden md:flex items-center gap-14">
         <a href="#" class="text-white text-lg font-aclonica hover:text-amber-400 transition">Home</a>
         <a href="#catalogo" class="text-white text-lg font-aclonica hover:text-amber-400 transition">Catálogo</a>
-        <a href="#tecnologias" class="text-white text-lg font-aclonica hover:text-amber-400 transition">Tecnologias</a>
+        <a href="./tecnologias.html" class="text-white text-lg font-aclonica hover:text-amber-400 transition">Tecnologias</a>
       </nav>
 
+      <div class="header-actions">
+      <button type="button" class="mobile-menu-toggle" data-mobile-menu-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <button class="relative group" aria-label="Carrinho">
         <svg class="w-8 h-8 text-white group-hover:text-amber-400 transition" fill="currentColor" viewBox="0 0 24 24">
           <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
         </svg>
         <span class="absolute -top-1 -right-1 w-5 h-8 bg-amber-600 rounded-full text-white text-xs flex items-center justify-center">2</span>
       </button>
+      </div>
     </div>
   </header>
 

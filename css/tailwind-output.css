@@ -636,12 +636,37 @@ video {
   inset: 0px;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
+.-bottom-3 {
+  bottom: -0.75rem;
+}
+
+.-left-3 {
+  left: -0.75rem;
+}
+
 .-right-1 {
   right: -0.25rem;
 }
 
+.-right-3 {
+  right: -0.75rem;
+}
+
 .-top-1 {
   top: -0.25rem;
+}
+
+.-top-5 {
+  top: -1.25rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .left-0 {
@@ -697,6 +722,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -741,6 +770,10 @@ video {
   display: none;
 }
 
+.aspect-\[1\.5\/1\] {
+  aspect-ratio: 1.5/1;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -765,6 +798,18 @@ video {
   height: 1054px;
 }
 
+.h-\[240px\] {
+  height: 240px;
+}
+
+.h-\[62\%\] {
+  height: 62%;
+}
+
+.h-\[78\%\] {
+  height: 78%;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -777,8 +822,20 @@ video {
   width: 2rem;
 }
 
+.w-\[48\%\] {
+  width: 48%;
+}
+
+.w-\[72\%\] {
+  width: 72%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.min-w-0 {
+  min-width: 0px;
 }
 
 .max-w-\[1440px\] {
@@ -787,6 +844,10 @@ video {
 
 .max-w-\[606px\] {
   max-width: 606px;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .shrink-0 {
@@ -820,6 +881,10 @@ video {
   scroll-snap-align: start;
 }
 
+.scroll-mt-24 {
+  scroll-margin-top: 6rem;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -844,6 +909,10 @@ video {
   gap: 0.25rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-14 {
   gap: 3.5rem;
 }
@@ -864,6 +933,12 @@ video {
   gap: 2rem;
 }
 
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -880,12 +955,20 @@ video {
   border-radius: 20px;
 }
 
+.rounded-\[2rem\] {
+  border-radius: 2rem;
+}
+
 .rounded-\[32px\] {
   border-radius: 32px;
 }
 
 .rounded-\[44px\] {
   border-radius: 44px;
+}
+
+.rounded-\[5rem\] {
+  border-radius: 5rem;
 }
 
 .rounded-full {
@@ -900,6 +983,10 @@ video {
 .bg-amber-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(217 119 6 / var(--tw-bg-opacity, 1));
+}
+
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
 }
 
 .bg-neutral-100 {
@@ -935,6 +1022,12 @@ video {
   background-image: url('https://placehold.co/1440x1054/orange/white?text=Hero+Background');
 }
 
+.from-transparent {
+  --tw-gradient-from: transparent var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-white\/0 {
   --tw-gradient-from: rgb(255 255 255 / 0) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -961,6 +1054,11 @@ video {
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-1\.5 {
@@ -1001,8 +1099,16 @@ video {
   padding-bottom: 1.75rem;
 }
 
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -1109,6 +1215,16 @@ video {
 
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.text-\[\#252527\] {
+  --tw-text-opacity: 1;
+  color: rgb(37 37 39 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#555457\] {
+  --tw-text-opacity: 1;
+  color: rgb(85 84 87 / var(--tw-text-opacity, 1));
 }
 
 .text-amber-600 {
@@ -1223,6 +1339,64 @@ video {
   color: rgb(251 191 36 / var(--tw-text-opacity, 1));
 }
 
+@media (min-width: 640px) {
+  .sm\:-bottom-5 {
+    bottom: -1.25rem;
+  }
+
+  .sm\:-left-6 {
+    left: -1.5rem;
+  }
+
+  .sm\:-right-6 {
+    right: -1.5rem;
+  }
+
+  .sm\:-top-8 {
+    top: -2rem;
+  }
+
+  .sm\:h-\[280px\] {
+    height: 280px;
+  }
+
+  .sm\:rounded-\[8rem\] {
+    border-radius: 8rem;
+  }
+
+  .sm\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .sm\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
+  .sm\:pt-14 {
+    padding-top: 3.5rem;
+  }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:leading-8 {
+    line-height: 2rem;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -1242,7 +1416,39 @@ video {
     order: 2;
   }
 
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[minmax\(0\2c 1\.1fr\)_minmax\(0\2c 1fr\)\] {
+    grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
+
+  .lg\:rounded-\[10rem\] {
+    border-radius: 10rem;
+  }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }

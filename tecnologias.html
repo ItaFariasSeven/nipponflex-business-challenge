@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tecnologias | Nipponflex</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Acme&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/tailwind-output.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <style>
+    .technology-story {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 4rem;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 4.5rem 2.5rem;
+    }
+
+    .technology-story__copy { order: 2; min-width: 0; }
+    .technology-story__visual { order: 1; min-width: 0; }
+
+    .technology-story--image-right .technology-story__copy { order: 1; }
+    .technology-story--image-right .technology-story__visual { order: 2; }
+
+    .technology-story__title {
+      margin: 0 0 1.25rem;
+      color: #252527;
+      font-family: Aclonica, sans-serif;
+      font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+      line-height: 1.12;
+    }
+
+    .technology-story__text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      color: #555457;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .technology-story__text p { margin: 0; }
+
+    .technology-story__visual {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .technology-story__visual::before,
+    .technology-story__visual::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      background: #f5f5f5;
+      border-radius: 1.25rem;
+    }
+
+    .technology-story__visual::before {
+      top: -9%;
+      left: -6%;
+      width: 72%;
+      height: 78%;
+    }
+
+    .technology-story__visual::after {
+      right: -5%;
+      bottom: 10%;
+      width: 48%;
+      height: 62%;
+      background: #f7f7f7;
+    }
+
+    .technology-story__image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1.5 / 1;
+      border-radius: clamp(4rem, 12vw, 10rem);
+      object-fit: cover;
+      box-shadow: 0 28px 28px -20px rgba(111, 78, 39, 0.62);
+    }
+
+    .technology-rabatan-layout {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(0.5rem, 2.5vw, 4rem);
+      padding-right: clamp(0.75rem, 4vw, 2.5rem);
+      padding-left: clamp(0.75rem, 4vw, 2.5rem);
+    }
+
+    .technology-rabatan-title {
+      font-size: clamp(1.15rem, 3vw, 2.5rem);
+      line-height: 1.12;
+    }
+
+    @media (max-width: 1023px) {
+      .technology-story {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: clamp(0.5rem, 2.5vw, 1.5rem);
+        padding: 3.5rem 1rem;
+      }
+
+      .technology-story--image-right {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      }
+
+      .technology-story__title {
+        margin-bottom: 0.65rem;
+        font-size: clamp(1.1rem, 3.8vw, 1.75rem);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .technology-story { gap: 0.5rem; padding: 2.75rem 0.75rem; }
+      .technology-story__title {
+        margin-bottom: 0.55rem;
+        font-size: clamp(1.05rem, 5vw, 1.4rem);
+      }
+      .technology-story__text { gap: 0.7rem; font-size: clamp(0.75rem, 2.6vw, 0.95rem); line-height: 1.5; }
+      .technology-rabatan-layout { gap: 0.5rem; }
+      .technology-rabatan-copy .space-y-5 { font-size: clamp(0.75rem, 2.6vw, 0.95rem); line-height: 1.5; }
+    }
+  </style>
+</head>
+<body class="font-body text-stone-900 antialiased">
+  <header class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300" id="header">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-10 py-7 flex items-center justify-between">
+      <a href="./index.html" class="text-white text-3xl font-aclonica capitalize tracking-tight">Nipponflex</a>
+
+      <nav id="primary-navigation" aria-label="Navegação principal" class="site-navigation hidden md:flex items-center gap-14">
+        <a href="./index.html" class="text-white text-lg font-aclonica hover:text-amber-400 transition">Home</a>
+        <a href="./index.html#catalogo" class="text-white text-lg font-aclonica hover:text-amber-400 transition">Catálogo</a>
+        <a href="./tecnologias.html" aria-current="page" class="text-white text-lg font-aclonica hover:text-amber-400 transition">Tecnologias</a>
+      </nav>
+
+      <div class="header-actions">
+      <button type="button" class="mobile-menu-toggle" data-mobile-menu-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <button class="relative group" aria-label="Carrinho">
+        <svg class="w-8 h-8 text-white group-hover:text-amber-400 transition" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+        </svg>
+        <span class="absolute -top-1 -right-1 w-5 h-8 bg-amber-600 rounded-full text-white text-xs flex items-center justify-center">2</span>
+      </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="tecnologias-title" class="w-full">
+      <div class="technologies-hero relative flex h-[240px] items-center justify-center overflow-hidden bg-cover bg-center text-center sm:h-[280px]">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <h1 id="tecnologias-title" class="relative z-10 px-4 text-5xl font-aclonica text-white drop-shadow-lg sm:text-6xl lg:text-7xl">
+          Tecnologias
+        </h1>
+        <div class="absolute inset-x-0 bottom-0 z-10 h-8 bg-gradient-to-b from-transparent to-white"></div>
+      </div>
+
+      <div id="rabatan" class="technology-rabatan-layout mx-auto grid max-w-[1440px] items-center pb-20 pt-10 sm:pb-24 sm:pt-14 lg:py-20">
+        <div class="relative min-w-0">
+          <div aria-hidden="true" class="absolute -left-3 -top-5 -z-10 h-[78%] w-[72%] rounded-[2rem] bg-neutral-100 sm:-left-6 sm:-top-8"></div>
+          <div aria-hidden="true" class="absolute -bottom-3 -right-3 -z-10 h-[62%] w-[48%] rounded-[2rem] bg-neutral-100 sm:-bottom-5 sm:-right-6"></div>
+          <img src="./css/images/rabatan.jpg" alt="Ambiente ilustrativo da tecnologia Rabatan" class="technology-story__image" />
+        </div>
+
+        <div class="technology-rabatan-copy mx-auto min-w-0 max-w-xl lg:mx-0">
+          <h2 id="rabatan-title" class="technology-rabatan-title mb-5 font-aclonica text-4xl text-[#252527] sm:text-5xl">Rabatan</h2>
+          <div class="space-y-5 text-base leading-7 text-[#555457] sm:text-lg sm:leading-8">
+            <p>O Rabatan&reg; que comp&otilde;e a superf&iacute;cie superior dos aparelhos Nipponflex &eacute; um perfilado Hi Tech de poliuretano, tratado com produtos especiais e vulcanizado a uma temperatura de aproximadamente 180&deg; C.</p>
+            <p>Ele possui milhares de pontos de acupress&atilde;o enrijecidos que imitam a ponta dos dedos de um massagista, proporcionando uma automassagem relaxante.</p>
+            <p>No baixo relevo do Rabatan est&atilde;o aplicadas as pastilhas com as energias FIR Power Bioceramic, FIR Power NG, Magnetos, MFP - Magnetic FIR Power e &Iacute;on Balls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section aria-labelledby="ion-balls-title" class="technology-story technology-story--image-right">
+      <div class="technology-story__copy">
+        <h2 id="ion-balls-title" class="technology-story__title">&Iacute;on Balls</h2>
+        <div class="technology-story__text">
+          <p>Tecnologia desenvolvida pelo cientista japon&ecirc;s Dr. Toshio Komuro e fornecida com exclusividade para a Nipponflex.</p>
+          <p>As esferas de Ion Balls s&atilde;o compostas por minerais rar&iacute;ssimos e de alt&iacute;ssima pureza encontrados em meteoritos ou na crosta profunda de &aacute;reas vulc&acirc;nicas.</p>
+          <p>Os Ion Balls s&atilde;o esferas minerais que liberam &iacute;ons negativos, pequenas mol&eacute;culas carregadas de el&eacute;trons, que est&atilde;o por toda a parte e somente s&atilde;o encontradas em abund&acirc;ncia na natureza.</p>
+          <p>Os &iacute;ons negativos s&atilde;o a raz&atilde;o pela qual nos sentimos bem-humorados e tranquilos e ajudam na troca do oxig&ecirc;nio pelo g&aacute;s carb&ocirc;nico no nosso organismo, melhorando a oxigena&ccedil;&atilde;o sangu&iacute;nea.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="fir-power-title" class="technology-story technology-story--image-left">
+      <div class="technology-story__copy">
+        <h2 id="fir-power-title" class="technology-story__title">FIR Power</h2>
+        <div class="technology-story__text">
+          <p>A poderosa tecnologia FIR Power tem a capacidade de absorver e armazenar os el&eacute;trons provenientes de ondas eletromagn&eacute;ticas irradiadas pela luz ou calor do seu corpo, emitindo ent&atilde;o frequ&ecirc;ncia de ondas de 4 a 16 m&iacute;crons e trilh&otilde;es de vibra&ccedil;&otilde;es, quebrando as macromol&eacute;culas de &aacute;gua corporal, liberando as vitaminas, prote&iacute;nas e sais minerais, para melhor absor&ccedil;&atilde;o celular.</p>
+          <p>Essas tecnologias s&atilde;o exclusivamente fornecidas &agrave; Nipponflex pelo cientista japon&ecirc;s, mundialmente reconhecido, Dr. Toshio Komuro, que possui patentes e estudos publicados em 27 pa&iacute;ses.</p>
+          <p>As tecnologias FIR Bioceramic&reg; e FIR NG&reg; est&atilde;o presentes, no formato de pastilhas aplicadas no baixo relevo do Rabatan&reg;, nos sistemas Cient&iacute;ficos de Dormir e nos travesseiros Nipponflex.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="mfp-title" class="technology-story technology-story--image-right">
+      <div class="technology-story__copy">
+        <h2 id="mfp-title" class="technology-story__title">MFP - Magnetic<br />FIR Power</h2>
+        <div class="technology-story__text">
+          <p>MFP&reg; - Tecnologia in&eacute;dita desenvolvida pela Nipponflex junto com o Dr. Toshio Komuro, resultado da fus&atilde;o do FIR Power e magnetos em uma &uacute;nica pastilha, na qual o FIR Power potencializa a efici&ecirc;ncia do campo magn&eacute;tico ideal para o organismo e a energia magn&eacute;tica potencializa o FIR Power, criando ondas de 4 a 16 m&iacute;crons e trilh&otilde;es de vibra&ccedil;&otilde;es por segundo.</p>
+          <p>MFP&reg; &eacute; patenteado em mais de 40 pa&iacute;ses.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="magnetos-title" class="technology-story technology-story--image-left">
+      <div class="technology-story__copy">
+        <h2 id="magnetos-title" class="technology-story__title">Magnetos</h2>
+        <div class="technology-story__text">
+          <p>&Iacute;m&atilde;s de Ferrite de B&aacute;rio, em pastilhas, que emitem energia magn&eacute;tica de aproximadamente 800 Gauss, aplicados em pontos espec&iacute;ficos do baixo relevo do Rabatan&reg;.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="triple-energy-title" class="technology-story technology-story--image-right">
+      <div class="technology-story__copy">
+        <h2 id="triple-energy-title" class="technology-story__title">Rabatan Power<br />Triple Energy</h2>
+        <div class="technology-story__text">
+          <p>Conta com as poderosas energias FIR Power&reg;, MFP&reg; e a grande novidade da linha, o Ion Balls.</p>
+          <p>As pastilhas das tecnologias s&atilde;o aplicadas no baixo-relevo do perfilado Hi Tech dos ARs e travesseiros.</p>
+          <p>Dispon&iacute;vel somente sob encomenda.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="isotermico-title" class="technology-story technology-story--image-left">
+      <div class="technology-story__copy">
+        <h2 id="isotermico-title" class="technology-story__title">Sistema Isot&eacute;rmico<br />Exclusivo</h2>
+        <div class="technology-story__text">
+          <p>O sistema isot&eacute;rmico EPS 2000 foi desenvolvido por engenheiros italianos com exclusividade para a Nipponflex, uma base r&iacute;gida de poliestireno expandido com exclusiva passagem de ar e altamente resistente, que d&aacute; suporte e etapa de densidade progressiva G-Z do aparelho.</p>
+          <p>Essa camada exclusiva adiciona durabilidade, ventila&ccedil;&atilde;o e leveza ao produto.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="densidade-gz-title" class="technology-story technology-story--image-right">
+      <div class="technology-story__copy">
+        <h2 id="densidade-gz-title" class="technology-story__title">Densidade<br />Progressiva G-Z</h2>
+        <div class="technology-story__text">
+          <p>A nova gera&ccedil;&atilde;o de densidade progressiva G-Z Nipponflex cont&eacute;m componentes especialmente desenvolvidos com camadas de poliuretano de alto desempenho, altura superior, resili&ecirc;ncia e conforto in&eacute;ditos, incluindo a camada tecnol&oacute;gica G-Z.</p>
+          <p>Sua formula&ccedil;&atilde;o foi elaborada com copol&iacute;meros de alt&iacute;ssima qualidade, exclusividade Nipponflex.</p>
+          <p>Essa tecnologia soma as camadas de diferentes materiais e espessuras ordenadas em uma estrutura &uacute;nica que combina suavidade ao toque com perfeita acomoda&ccedil;&atilde;o das curvas do corpo, aliando alto conforto, leveza e equil&iacute;brio postural para contribuir a um sono sereno e reparador.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="densidade-progressiva-title" class="technology-story technology-story--image-left">
+      <div class="technology-story__copy">
+        <h2 id="densidade-progressiva-title" class="technology-story__title">Densidade<br />Progressiva</h2>
+        <div class="technology-story__text">
+          <p>A Densidade Progressiva, usada nos Sistemas Cient&iacute;ficos de Dormir Nipponflex, &eacute; composta por diversas camadas de poliuretano com diferentes densidades reais, a fim de atender todos os biotipos.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="tecidos-title" class="technology-story technology-story--image-right">
+      <div class="technology-story__copy">
+        <h2 id="tecidos-title" class="technology-story__title">Tecidos</h2>
+        <div class="technology-story__text">
+          <p>Os tecidos bordados personalizados Nipponflex oferecem alto conforto e durabilidade. Al&eacute;m disso, cada linha apresenta diferentes tratamentos que acrescentam ainda mais exclusividade aos materiais.</p>
+          <p><strong>Anti&aacute;caro:</strong> Prote&ccedil;&atilde;o que reduz a presen&ccedil;a de &aacute;caros causadores de alergia e amplia a vida &uacute;til e higiene.</p>
+          <p><strong>Antifungo:</strong> Prote&ccedil;&atilde;o que evita a prolifera&ccedil;&atilde;o de mofo no produto, garante maior durabilidade e higiene.</p>
+          <p><strong>&Iacute;ons de Prata:</strong> Prote&ccedil;&atilde;o de alta tecnologia aplicada aos fios do revestimento, tem propriedade antimicrobiana e antiviral, protegendo contra 850 tipos de v&iacute;rus e bact&eacute;ria, auxiliando na higiene do produto. A efici&ecirc;ncia dos &iacute;ons de prata segue normas internacionais de controle de micro-organismos (ISO 18184:2019) e foi testada e aprovada em ensaios laboratoriais.</p>
+          <p><strong>Hidro-&Oacute;leo Repelente:</strong> Tratamento que reduz a absor&ccedil;&atilde;o de l&iacute;quidos e limita a ader&ecirc;ncia de sujeira, facilitando a limpeza e manuten&ccedil;&atilde;o.</p>
+          <p><strong>Aloe Vera:</strong> Ess&ecirc;ncia da natureza, adiciona perfume e toque de suavidade.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+  
+    <section aria-labelledby="pillow-euro-top-title" class="technology-story technology-story--image-left">
+      <div class="technology-story__copy">
+        <h2 id="pillow-euro-top-title" class="technology-story__title">Pillow Euro Top</h2>
+        <div class="technology-story__text">
+          <p>Design lateral com alta intermedia&ccedil;&atilde;o permite a uni&atilde;o de diferentes revestimentos e contorno destacado, trazendo sofistica&ccedil;&atilde;o e aspecto &uacute;nico.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="pillow-top-soft-title" class="technology-story technology-story--image-right">
+      <div class="technology-story__copy">
+        <h2 id="pillow-top-soft-title" class="technology-story__title">Pillow Top Soft</h2>
+        <div class="technology-story__text">
+          <p>O Pillow Top Soft &eacute; o mais exclusivo de toda a linha Nipponflex.</p>
+          <p>Al&eacute;m de ser uma camada extra sobre o aparelho, composta por Rabatan&reg; e uma espessa l&acirc;mina de poliuretano de alto conforto e resili&ecirc;ncia, tem design original com esmerado acabamento de fixa&ccedil;&atilde;o de ponto &uacute;nico, que confere aspecto clean e bem integrado ao produto.</p>
+          <p>Esta camada torna o aparelho ainda mais c&ocirc;modo e proporciona visual moderno e elegante.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="pillow-top-title" class="technology-story technology-story--image-left">
+      <div class="technology-story__copy">
+        <h2 id="pillow-top-title" class="technology-story__title">Pillow Top</h2>
+        <div class="technology-story__text">
+          <p>Pillow Top &eacute; uma camada sobre o colch&atilde;o composta por um Rabatan&reg; e uma l&acirc;mina de espuma, que al&eacute;m de tornar o produto ainda mais confort&aacute;vel, proporciona um visual moderno e elegante ao produto.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="relax-system-title" class="technology-story technology-story--image-right">
+      <div class="technology-story__copy">
+        <h2 id="relax-system-title" class="technology-story__title">Relax System</h2>
+        <div class="technology-story__text">
+          <p>Relax System &eacute; um vibromassageador eletr&ocirc;nico que est&aacute; acoplado no interior dos sistemas de dormir Nipponflex.</p>
+          <p>Essa tecnologia oferece uma massagem eletr&ocirc;nica agrad&aacute;vel e relaxante, com vibra&ccedil;&otilde;es de pulso e/ou ondas cont&iacute;nuas, de baixa e alta intensidade e/ou velocidade.</p>
+          <p>O Relax System atua em 5 partes do corpo e com 9 modos de massagem diferentes, que s&atilde;o ativados por controle.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="biopower-title" class="technology-story technology-story--image-left">
+      <div class="technology-story__copy">
+        <h2 id="biopower-title" class="technology-story__title">Biopower</h2>
+        <div class="technology-story__text">
+          <p>O Biopower &eacute; um sistema integrado de vibromassageador eletr&ocirc;nico e PEMF-EL patenteado pela Nipponflex.</p>
+          <p>PEMF-EL s&atilde;o ondas eletromagn&eacute;ticas puls&aacute;teis de extrema baixa frequ&ecirc;ncia (7.83Hz a 86HZ) que teve sua origem na teoria da f&iacute;sica qu&acirc;ntica.</p>
+          <p>O vibromassageador eletr&ocirc;nico, acoplado no interior dos sistemas de dormir Nipponflex, oferece nove tipos de massagem eletr&ocirc;nica agrad&aacute;vel e relaxante, com vibra&ccedil;&otilde;es de pulso e/ou ondas cont&iacute;nuas de baixa e alta intensidade e/ou velocidade que atuam em 5 partes do corpo.</p>
+          <p>Enquanto voc&ecirc; dorme, deixe o SISTEMA BIOPOWER agir em seu corpo.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section aria-labelledby="bluetooth-title" class="technology-story technology-story--image-right">
+      <div class="technology-story__copy">
+        <h2 id="bluetooth-title" class="technology-story__title">Bluetooth</h2>
+        <div class="technology-story__text">
+          <p>Acione seu Relax System&reg; ou BioPower&reg; pelo controle remoto incluso ou utilize os aplicativos Nipponflex em seu celular para acionar todas as fun&ccedil;&otilde;es dos sistemas, incluindo sele&ccedil;&atilde;o de velocidade, intensidade, tipo de massagem e despertador silencioso por vibromassagem.</p>
+          <p>Os aplicativos est&atilde;o dispon&iacute;veis gratuitamente na Apple App Store e Google Play Store.</p>
+        </div>
+      </div>
+      <div class="technology-story__visual">
+        <img src="./css/images/rabatan.jpg" alt="Ambiente interno com sof&aacute;, mesa e planta" class="technology-story__image" loading="lazy" />
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
