@@ -1,8 +1,3 @@
-/**
- * Nipponflex — Interatividade
- * Scroll lateral, header dinâmico e efeitos
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   initHorizontalScroll();
   initHeaderScroll();

@@ -33,6 +33,7 @@
     </div>
   </header>
 
+  <!-- cabeçalho -->
   <section class="relative w-full h-[1054px] flex items-center justify-center overflow-hidden bg-hero bg-cover bg-center">
     <div class="absolute inset-0 bg-gradient-to-b from-white/0 via-white/0 to-white pointer-events-none"></div>
     <div class="relative z-10 max-w-[1440px] mx-auto px-10 text-center">
@@ -45,6 +46,7 @@
     </div>
   </section>
 
+  <!-- Nosso compromisso -->
   <section class="max-w-[1440px] mx-auto px-10 py-24">
     <h2 class="text-stone-900 text-5xl font-aclonica mb-16">Nosso Compromisso <br/>com você</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -69,16 +71,11 @@
     </div>
   </section>
 
+  <!-- Produtos mais vendido -->
   <section id="catalogo" class="bg-neutral-100 py-24">
     <div class="max-w-[1440px] mx-auto px-10">
       <h2 class="text-stone-900 text-5xl font-aclonica text-center mb-8">Produtos mais vendido</h2>
       <div class="flex justify-center mb-14">
-        <div class="inline-flex bg-zinc-100 rounded-[44px] p-1.5 gap-1">
-          <button class="px-6 py-2 bg-white rounded-[32px] text-stone-900 text-lg font-aclonica shadow-sm">Categoria</button>
-          <button class="px-6 py-2 rounded-[32px] text-stone-900 text-lg font-acme opacity-80 hover:bg-white/50 transition">Categoria</button>
-          <button class="px-6 py-2 rounded-[32px] text-stone-900 text-lg font-acme opacity-80 hover:bg-white/50 transition">Categoria</button>
-          <button class="px-6 py-2 rounded-[32px] text-stone-900 text-lg font-acme opacity-80 hover:bg-white/50 transition">Categoria</button>
-        </div>
       </div>
 
       <div class="relative group">
@@ -90,78 +87,85 @@
         </button>
 
         <div id="products-scroll" class="horizontal-scroll flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory">
+
+          <!-- Kit Bem-Estar -->
           <article class="product-card snap-start shrink-0">
-            <div class="bg-neutral-50 h-60 flex items-center justify-center relative">
-              <img src="https://placehold.co/218x256" alt="Produto" class="object-contain h-64 rotate-180" />
+            <div class="bg-neutral-50 h-60 justify-center overflow-hidden relative">
+              <img src="/images/kitbemestar.jpg" alt="Produto" class="object-cover object-center h-full w-full " />
             </div>
             <div class="p-5 bg-white rounded-b-[20px]">
-              <span class="text-zinc-600 text-base font-aclonica">Categoria</span>
-              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Nome</h3>
+              <span class="text-zinc-600 text-base font-aclonica">Kit</span>
+              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Kit bem-estar</h3>
               <button class="mt-4 ml-auto w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-amber-600 transition" aria-label="Adicionar ao carrinho">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
               </button>
             </div>
           </article>
 
+          <!-- Filtro -->
           <article class="product-card snap-start shrink-0">
-            <div class="bg-neutral-50 h-60 flex items-center justify-center relative">
-              <img src="https://placehold.co/218x256" alt="Produto" class="object-contain h-64 rotate-180" />
+            <div class="bg-neutral-50 h-60 justify-center overflow-hidden relative">
+              <img src="/images/filtro4estagios.jpg" alt="Produto" class="object-cover object-center h-full w-full " />
             </div>
             <div class="p-5 bg-white rounded-b-[20px]">
-              <span class="text-zinc-600 text-base font-aclonica">Categoria</span>
-              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Nome</h3>
+              <span class="text-zinc-600 text-base font-aclonica">E-Energy</span>
+              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Alcaline Max</h3>
               <button class="mt-4 ml-auto w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-amber-600 transition" aria-label="Adicionar ao carrinho">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
               </button>
             </div>
           </article>
 
+          <!-- Choveiro -->
           <article class="product-card snap-start shrink-0">
-            <div class="bg-neutral-50 h-60 flex items-center justify-center relative">
-              <img src="https://placehold.co/223x250" alt="Produto" class="object-contain h-64 rotate-180" />
+            <div class="bg-neutral-50 h-60 justify-center overflow-hidden relative">
+              <img src="/images/choveiro.jpg" alt="Produto" class="object-cover object-center h-full w-full " />
             </div>
             <div class="p-5 bg-white rounded-b-[20px]">
-              <span class="text-zinc-600 text-base font-aclonica">Categoria</span>
-              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Nome</h3>
+              <span class="text-zinc-600 text-base font-aclonica">E-Energy</span>
+              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Alcaline Shower</h3>
               <button class="mt-4 ml-auto w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-amber-600 transition" aria-label="Adicionar ao carrinho">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
               </button>
             </div>
           </article>
 
+          <!-- Pulseira -->
           <article class="product-card snap-start shrink-0">
-            <div class="bg-neutral-50 h-60 flex items-center justify-center relative">
-              <img src="https://placehold.co/241x289" alt="Produto" class="object-contain h-72 rotate-180" />
+            <div class="bg-neutral-50 h-60 justify-center overflow-hidden relative">
+              <img src="/images/pulseira.jpg" alt="Produto" class="object-cover object-center h-full w-full " />
             </div>
             <div class="p-5 bg-white rounded-b-[20px]">
-              <span class="text-zinc-600 text-base font-aclonica">Categoria</span>
-              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Nome</h3>
+              <span class="text-zinc-600 text-base font-aclonica">Fir Ion -</span>
+              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Bracelet Triple Energy</h3>
               <button class="mt-4 ml-auto w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-amber-600 transition" aria-label="Adicionar ao carrinho">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
               </button>
             </div>
           </article>
 
+          <!-- Colchão -->
           <article class="product-card snap-start shrink-0">
-            <div class="bg-neutral-50 h-60 flex items-center justify-center relative">
-              <img src="https://placehold.co/218x256" alt="Produto" class="object-contain h-64 rotate-180" />
+            <div class="bg-neutral-50 h-60 justify-center overflow-hidden relative">
+              <img src="/images/colchao.jpg" alt="Produto" class="object-cover object-center h-full w-full " />
             </div>
             <div class="p-5 bg-white rounded-b-[20px]">
-              <span class="text-zinc-600 text-base font-aclonica">Categoria</span>
-              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Nome</h3>
+              <span class="text-zinc-600 text-base font-aclonica">Star Prime</span>
+              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Star Prime Automassagem</h3>
               <button class="mt-4 ml-auto w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-amber-600 transition" aria-label="Adicionar ao carrinho">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
               </button>
             </div>
           </article>
 
+          <!-- Coleira de cachorro -->
           <article class="product-card snap-start shrink-0">
-            <div class="bg-neutral-50 h-60 flex items-center justify-center relative">
-              <img src="https://placehold.co/223x250" alt="Produto" class="object-contain h-64 rotate-180" />
+            <div class="bg-neutral-50 h-60 overflow-hidden justify-center relative">
+              <img src="/images/coleiracachorro.jpg" alt="Produto" class="object-cover object-center h-full w-full " />
             </div>
             <div class="p-5 bg-white rounded-b-[20px]">
-              <span class="text-zinc-600 text-base font-aclonica">Categoria</span>
-              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Nome</h3>
+              <span class="text-zinc-600 text-base font-aclonica">Pet Fir</span>
+              <h3 class="text-slate-900 text-xl font-inter font-semibold mt-1">Coleira Pet</h3>
               <button class="mt-4 ml-auto w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-amber-600 transition" aria-label="Adicionar ao carrinho">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
               </button>
@@ -192,7 +196,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div class="relative">
         <div class="absolute -inset-8 bg-neutral-100 rounded-[20px] -z-10 translate-x-[-40px]"></div>
-        <img src="https://placehold.co/629x445" alt="Ambiente Nipponflex" class="w-full rounded-[20px] shadow-xl" />
+        <img src="/images/foto-fabrica.jpg" alt="Ambiente Nipponflex" class="w-full rounded-[20px] shadow-xl" />
       </div>
       <div>
         <span class="text-amber-600 text-lg font-acme uppercase tracking-[3.15px]">História</span>
@@ -221,8 +225,8 @@
       </div>
       <div class="order-1 lg:order-2 relative">
         <div class="grid grid-cols-2 gap-4">
-          <img src="https://placehold.co/223x229" alt="Detalhe Premium" class="rounded-2xl shadow-lg w-full" />
-          <img src="https://placehold.co/223x317" alt="Produto Premium" class="rounded-2xl shadow-lg w-full mt-8" />
+          <img src="/images/construindo-colchao.jpg" alt="Detalhe Premium" class="rounded-2xl shadow-lg w-full" />
+          <img src="/images/laboratorio.jpg" alt="Produto Premium" class="rounded-2xl shadow-lg w-full mt-8" />
         </div>
       </div>
     </div>
@@ -232,7 +236,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div class="relative">
         <div class="absolute -inset-8 bg-neutral-100 rounded-[20px] -z-10 translate-x-[40px]"></div>
-        <img src="https://placehold.co/629x445" alt="Portfólio de Produtos" class="w-full rounded-[20px] shadow-xl" />
+        <img src="/images/80-produtos.jpg" alt="Portfólio de Produtos" class="w-full rounded-[20px] shadow-xl" />
       </div>
       <div>
         <span class="text-amber-600 text-lg font-acme uppercase tracking-[3.15px]">+80</span>
@@ -255,8 +259,8 @@
       </div>
       <div class="order-1 lg:order-2 relative">
         <div class="grid grid-cols-2 gap-4">
-          <img src="https://placehold.co/223x229" alt="Biohacking 1" class="rounded-2xl shadow-lg w-full" />
-          <img src="https://placehold.co/223x317" alt="Biohacking 2" class="rounded-2xl shadow-lg w-full mt-8" />
+          <img src="/images/biohacking.jpg" alt="Biohacking 1" class="rounded-2xl shadow-lg w-full" />
+          <img src="/images/homem-biohacking.jpg" alt="Biohacking 2" class="rounded-2xl shadow-lg w-full mt-8" />
         </div>
       </div>
     </div>
@@ -266,80 +270,78 @@
     <div class="max-w-[1440px] mx-auto px-10">
       <h2 class="text-stone-900 text-5xl font-aclonica text-center mb-16">Depoimentos</h2>
       <div class="relative group">
-        <button class="scroll-btn left" data-target="testimonials-scroll" aria-label="Rolar para a esquerda">
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 1L1 6L6 11" />
-            <path d="M1 6H15" />
-          </svg>
-        </button>
 
         <div id="testimonials-scroll" class="horizontal-scroll flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory">
           <article class="testimonial-card snap-start shrink-0">
             <div class="relative mb-6">
-              <img src="https://placehold.co/370x476" alt="Bang Upin" class="w-full rounded-2xl" />
+              <video width="640" height="360" controls>
+                <source src="/videos/Depoimento01.mp4" alt="Depoimento 1" type="video/mp4" class="w-full rounded-2xl" />>
+              </video> 
             </div>
-            <img src="https://placehold.co/50x50" alt="Avatar" class="w-12 h-12 rounded-full mx-auto mb-2" />
-            <h3 class="text-center text-stone-900 text-lg font-aclonica capitalize">Bang Upin</h3>
-            <span class="block text-center text-stone-900 text-xs font-acme opacity-60">Pedagang Asongan</span>
+            <img src="/images/pulseira-unica.jpg" alt="Avatar" class="w-12 h-12 rounded-full mx-auto mb-2" />
+            <h3 class="text-center text-stone-900 text-lg font-aclonica capitalize">Kauã</h3>
             <p class="mt-4 text-center text-stone-900 text-sm font-acme opacity-80 px-4">
-              “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+              “Eu estava perdido e com as mãos paralisadas pela fibromialgia. A Nipponflex mudou a minha vida de verdade: recuperei minha força, voltei a trabalhar e a fazer minhas atividades diárias. É algo surreal!“
             </p>
             <div class="flex justify-center gap-2 mt-4">
               <span class="star filled"></span>
               <span class="star filled"></span>
               <span class="star filled"></span>
               <span class="star filled"></span>
-              <span class="star"></span>
+              <span class="star filled"></span>
             </div>
           </article>
 
           <article class="testimonial-card snap-start shrink-0">
             <div class="relative mb-6">
-              <img src="https://placehold.co/370x476" alt="Ibuk Sukijan" class="w-full rounded-2xl" />
+              <video width="640" height="360" controls>
+                <source src="/videos/Depoimento02.mp4" alt="Depoimento 2" type="video/mp4" class="w-full rounded-2xl" />>
+              </video> 
             </div>
-            <img src="https://placehold.co/50x50" alt="Avatar" class="w-12 h-12 rounded-full mx-auto mb-2" />
-            <h3 class="text-center text-stone-900 text-lg font-aclonica capitalize">Ibuk Sukijan</h3>
-            <span class="block text-center text-stone-900 text-xs font-acme opacity-60">Ibu Rumah Tangga</span>
+            <img src="/images/colchao.jpg" alt="Avatar" class="w-12 h-12 rounded-full mx-auto mb-2" />
+            <h3 class="text-center text-stone-900 text-lg font-aclonica capitalize">Odete</h3>
             <p class="mt-4 text-center text-stone-900 text-sm font-acme opacity-80 px-4">
-              “Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang terlihat mewah“
+              “Usar o colchão, o chinelo e o bracelete da Nipponflex transformou minha saúde. O que era um sofrimento com osteoporose, enxaqueca e má circulação simplesmente desapareceu nos meus exames recentes. Hoje tenho uma vida normal e sem dores!“
             </p>
             <div class="flex justify-center gap-2 mt-4">
               <span class="star filled"></span>
               <span class="star filled"></span>
               <span class="star filled"></span>
               <span class="star filled"></span>
-              <span class="star"></span>
+              <span class="star filled"></span>
             </div>
           </article>
 
           <article class="testimonial-card snap-start shrink-0">
             <div class="relative mb-6">
-              <img src="https://placehold.co/370x476" alt="Mpok Ina" class="w-full rounded-2xl" />
+              <video width="640" height="360" controls>
+                <source src="/videos/Depoimento03.mp4" alt="Depoimento 3" type="video/mp4" class="w-full rounded-2xl" />>
+              </video> 
             </div>
-            <img src="https://placehold.co/50x50" alt="Avatar" class="w-12 h-12 rounded-full mx-auto mb-2" />
-            <h3 class="text-center text-stone-900 text-lg font-aclonica capitalize">Mpok Ina</h3>
-            <span class="block text-center text-stone-900 text-xs font-acme opacity-60">Karyawan Swasta</span>
+            <img src="/images/joelheira.jpg" alt="Avatar" class="w-12 h-12 rounded-full mx-auto mb-2" />
+            <h3 class="text-center text-stone-900 text-lg font-aclonica capitalize">Aureni</h3>
             <p class="mt-4 text-center text-stone-900 text-sm font-acme opacity-80 px-4">
-              “Sangat terjangkau untuk kantong saya yang tidak terlalu banyak“
+              “Por um problema hereditário, meu corpo não absorvia ferro e eu vivia fraca, sem energia para nada. Com as tecnologias da Nipponflex, meu organismo voltou a absorver os nutrientes. Fui curada da anemia e ganhei uma disposição que não tinha há anos.“
             </p>
             <div class="flex justify-center gap-2 mt-4">
               <span class="star filled"></span>
               <span class="star filled"></span>
               <span class="star filled"></span>
               <span class="star filled"></span>
-              <span class="star"></span>
+              <span class="star filled"></span>
             </div>
           </article>
 
           <article class="testimonial-card snap-start shrink-0">
             <div class="relative mb-6">
-              <img src="https://placehold.co/370x476" alt="Cliente" class="w-full rounded-2xl" />
+              <video width="640" height="360" controls>
+                <source src="/videos/Depoimento04.mp4" alt="Depoimento 4" type="video/mp4" class="w-full rounded-2xl" />>
+              </video> 
             </div>
-            <img src="https://placehold.co/50x50" alt="Avatar" class="w-12 h-12 rounded-full mx-auto mb-2" />
-            <h3 class="text-center text-stone-900 text-lg font-aclonica capitalize">Cliente</h3>
-            <span class="block text-center text-stone-900 text-xs font-acme opacity-60">Profissional</span>
+            <img src="/images/colchao.jpg" alt="Avatar" class="w-12 h-12 rounded-full mx-auto mb-2" />
+            <h3 class="text-center text-stone-900 text-lg font-aclonica capitalize">Karina</h3>
             <p class="mt-4 text-center text-stone-900 text-sm font-acme opacity-80 px-4">
-              “A qualidade de sono melhorou significativamente desde que conheci a Nipponflex.“
+              “A fibromialgia me trouxe anos de dores crônicas que os médicos diziam não ter cura. O aparelho Nipponflex resolveu meu problema por completo, trazendo tanta energia e disposição que meu marido diz ter ganhado uma 'nova esposa'. Vale cada centavo!“
             </p>
             <div class="flex justify-center gap-2 mt-4">
               <span class="star filled"></span>
@@ -350,13 +352,6 @@
             </div>
           </article>
         </div>
-
-        <button class="scroll-btn right" data-target="testimonials-scroll" aria-label="Rolar para a direita">
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M10 1L15 6L10 11" />
-            <path d="M15 6H1" />
-          </svg>
-        </button>
       </div>
     </div>
   </section>

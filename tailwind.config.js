@@ -19,7 +19,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        hero: "url('https://placehold.co/1440x1054/orange/white?text=Hero+Background')",
+        hero: "url('/images/cabecalhoimage.jpg')",
       },
     },
   },

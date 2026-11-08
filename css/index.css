@@ -1,21 +1,13 @@
-
-
-/* =========================================
-   Nipponflex — Estilos Customizados
-   ========================================= */
-
-/* Scroll horizontal suave */
 .horizontal-scroll {
   scroll-behavior: smooth;
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE/Edge */
+  scrollbar-width: none;        
+  -ms-overflow-style: none;    
 }
 
 .horizontal-scroll::-webkit-scrollbar {
-  display: none;                /* Chrome/Safari */
+  display: none;                
 }
 
-/* Cards de produto */
 .product-card {
   width: 256px;
   border-radius: 20px;
@@ -29,7 +21,6 @@
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Cards de depoimento */
 .testimonial-card {
   width: 300px;
   padding: 24px;
@@ -43,7 +34,6 @@
   transform: translateY(-6px);
 }
 
-/* Botões de rolagem lateral */
 .scroll-btn {
   position: absolute;
   top: 50%;
@@ -81,7 +71,6 @@
   right: -24px;
 }
 
-/* Estrelas de avaliação */
 .star {
   width: 14px;
   height: 14px;
@@ -93,7 +82,6 @@
   background-color: #fb923c;
 }
 
-/* Header com fundo ao rolar */
 header.scrolled {
   background-color: rgba(28, 25, 23, 0.95);
   backdrop-filter: blur(8px);
