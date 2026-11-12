@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NipponFlex</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .banner {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35),
+          rgba(0, 0, 0, 0.15)),
+        url("../imagems/capa.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .foto-produto {
+      box-shadow: 0 15px 22px rgba(0, 0, 0, 0.18);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+  <header class="absolute top-0 left-0 z-20 w-full text-white">
+    <nav class="grid grid-cols-3 items-center px-5 md:px-10 py-5">
+
+      <a class="text-sm md:text-lg font-bold">
+        NipponFlex
+      </a>
+
+      <div class="flex justify-center gap-3 md:gap-8 text-xs md:text-sm">
+        <a href="#" class="hover:text-red-500">Home</a>
+        <a href="#" class="hover:text-red-500">Catálogo</a>
+        <a href="#" class="hover:text-red-500">Tecnologias</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="banner h-48 md:h-64 flex items-center justify-center text-white">
+
+    <h1 class="text-4xl md:text-6xl font-bold">
+      Produtos
+    </h1>
+
+  </section>
+
+  <main id="produtos" class="max-w-6xl mx-auto px-5 md:px-10">
+
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_009_imagem_02.png" alt="Produto 1" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Jarra de água 12L</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Uma melhor água para seu consumo.
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_015_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Jarra de água 10L</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Uma melhor água para seu consumo.
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_019_imagem_02.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Jarra de água 3L</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Mobilidade em suas mãos.
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_021_imagem_02.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Garrafa de água 550Ml</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Qualidade e saúde na palma da mão!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_023_imagem_02.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Garrafa de água 550Ml</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Qualidade e saúde na palma da mão!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_027_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Filtro de água</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Um banho que transforma uma rotina !
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_031_imagem_02.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">filtro de água</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Para uma orta mais limpa e saldável.
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+   <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_027_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Filtro de água</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Um banho que transforma uma rotina !
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_034_imagem_01.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Fri style </h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Para um melhor estilo de vida!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_043_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Pulseira de couro</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Para um melhor estilo de vida!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_045_imagem_01.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Fir styles metais</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_047_imagem_02.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Medalhão</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          energia concentrada em um só lugar.
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_049_imagem_01.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Band fir in-</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Energia aplicada em qualquer parte do corpo!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_051_imagem_02.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Palmilha insole</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          O melhor pra seu conforto.
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_053_imagem_01.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Palmilha insole</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Conforto a cada caminhar!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_055_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Palmilha magnética </h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Uma boa sensação para seus pés!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_056_imagem_01.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">chinelo feminino</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Conforto em cada passo!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_057_imagem_02.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Chinelo mascolino</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Faça sua caminhada com mais conforto!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_059_imagem_02.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Mascara para dormir</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Para uma boa noite de sono!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_061_imagem_02.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">panties calcinha</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          design moderno e confortável!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_063_imagem_02.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Cueca</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Designe moderno e confortavel e leve!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_064_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Legging</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          design moderno e confortável!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_067_imagem_01.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Cinta abdominal</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Energia que aconpanhe o movimento!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_068_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Shampoo condicionador</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Cabelos fortes e saúdaveis!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_069_imagem_02.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Multipurpose</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Ideal para qualquer parte do corpo!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_070_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Knee</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Joelhera de compressão!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_071_imagem_01.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Knee</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Joelhera com ajuste!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_073_imagem_02.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Wrist</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Munhequeira elástica!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row items-center
+                    gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_072_imagem_01.png" alt="Produto 3" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Wrist band</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Cuidado completo!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+    <article class="flex flex-col md:flex-row-reverse
+                    items-center gap-8 md:gap-12 py-12 md:py-16">
+
+      <div class="w-full md:w-1/2">
+        <img src="../imagems/pagina_074_imagem_01.png" alt="Produto 2" class="foto-produto w-full h-64 md:h-80
+                 object-cover rounded-xl">
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <h2 class="text-2xl font-bold">Magoy</h2>
+
+        <p class="text-gray-600 text-sm mt-2">
+          Relanxante muscular!
+        </p>
+
+        <button onclick="adicionarSacola()" class="mt-8 bg-slate-900 text-white
+                 w-10 h-10 rounded-full
+                 hover:bg-orange-500 transition" aria-label="Adicionar à sacola">
+          +
+        </button>
+      </div>
+
+    </article>
+  </main>
+   <footer class="bg-gray-100 px-10 md:px-16 py-16">
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+                <div>
+
+                    <h2 class="text-2xl font-bold text-gray-800">
+                        Panto
+                    </h2>
+
+                    <p class="text-xs text-gray-500 mt-5">
+                        Todos os direitos reservados.
+                    </p>
+
+                </div>
+                <div>
+
+                    <h3 class="text-orange-400 text-sm mb-4">
+                        Services
+                    </h3>
+
+                    <ul class="space-y-3 text-xs text-gray-700">
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                Social Marketing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                Campaigns
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                Branding
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div>
+
+                    <h3 class="text-orange-400 text-sm mb-4">
+                        Furniture
+                    </h3>
+
+                    <ul class="space-y-3 text-xs text-gray-700">
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                Beds
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                Chair
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                All
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div>
+
+                    <h3 class="text-orange-400 text-sm mb-4">
+                        Follow Us
+                    </h3>
+
+                    <ul class="space-y-3 text-xs text-gray-700">
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                f Facebook
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                ♥ Twitter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-orange-500">
+                                ◎ Instagram
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="mt-16 flex flex-col md:flex-row
+                justify-between gap-4 text-xs text-gray-500">
+
+                <p>
+                    Copyright © 2026
+                </p>
+
+                <div class="flex gap-5">
+
+                    <a href="#" class="hover:text-orange-500">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="#" class="hover:text-orange-500">
+                        Privacy Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </footer>
+</body>
+
+</html>
